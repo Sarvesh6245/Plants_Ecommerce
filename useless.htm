@@ -1,21 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="take2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/41de0e087b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon" href="CSS/favicon.ico">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     *cards*/
+
+
+section {
+  padding: 60px 0;
+}
+
+section .section-title {
+  text-align: center;
+  color: rgb(17, 43, 82);
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+#team .card {
+  border: none;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.mainflip {
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.frontside {
+  position: relative;
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.backside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.frontside,
+.backside {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 1s;
+  -moz-transform-style: preserve-3d;
+  -o-transition: 1s;
+  -o-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+.frontside .card {
+  min-height: 312px;
+}
+
+.backside .card {
+  min-height: 312px;
+
+}
+
+.backside .card a,
+.frontside .card a {
+  font-size: 18px;
+
+}
+
+
+
+.frontside .card .card-body img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}   
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3" style="background-color:lavender; height: 200px;">.
-                
+        <!--cards-->
+
+    <!-- Team -->
+    <section id="team" class="pb-5">
+        <div class="container">
+            <!-- style="background-image: linear-gradient(white 5% , rgb(145, 175, 209) 15%, #437fc7 60%); "-->
+            <h5 class="section-title h1">Find your PLANT</h5>
+            <div class="row">
+                <!-- Team member -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                        <div class="mainflip">
+                            <div class="frontside">
+                                <div class="card">
+                                    <div class="card-body text-center"
+                                        style="background: linear-gradient( #3C486B, rgb(84, 165, 202));   color: #ffffff !important; border-radius: 25px; box-shadow: 5px 10px #c0c2c4;">
+                                        <p><img class=" img-fluid" src="webimg/b.png"  alt="card image" style="height:150px; width: 150px;"></p>
+                                        <h4 style="font-weight: bolder;">CUSTOM WEB DEVELOPMENT</h4>
+                                        <p>Business Website <br> Domain <br> Hosting <br> Personal Website</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backside">
+                                <div class="card"
+                                    style=" background: linear-gradient(#FED8A7 , rgb(226, 132, 56)); border-radius: 25px; box-shadow: 5px 10px #c0c2c4; padding-top: 15%;">
+                                    <div class="card-body text-center mt-4">
+                                        
+                                        <p style="color: black !important;">At Web Clash, we offer custom website design, personal website design, 
+                                            domain and hosting services, and portfolio website design. Let us help you establish a strong online presence 
+                                            that showcases your brand or work. Contact us today to learn more! <br><br><br></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./Team member -->
+                <!-- Team member -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                        <div class="mainflip">
+                            <div class="frontside">
+                                <div class="card"
+                                    style="background: linear-gradient(#b5e68b , rgb(134, 220, 223)); border-radius: 25px; box-shadow: 5px 10px #d0e3f7; ">
+                                    <div class="card-body text-center">
+                                        <p><img class=" img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Belis_peremnis_-_panoramio.jpg/330px-Belis_peremnis_-_panoramio.jpg" alt="card image" style="height:170px; width: 170px;"></p>
+                                        <h4 style="font-weight: bolder;">DAISY</h4>
+                                        <p>Instagram <br> Youtube <br>Email <br> Whatsapp Business</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backside">
+                                <div class="card"
+                                    style="background: linear-gradient( #3C486B, rgb(84, 165, 202));   color: #ffffff !important; border-radius: 25px;  box-shadow: 5px 10px #c0c2c4; padding-top: 15%;">
+                                    <div class="card-body text-center mt-4">
+                                       
+                                        <p>At Web Clash, we provide marketing tips, animated video creation, and social media
+                                             marketing services for businesses. Let us help you reach your target audience and 
+                                             grow your brand online. Contact us today to learn more! <br><br><br></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./Team member -->
+                <!-- Team member -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                        <div class="mainflip">
+                            <div class="frontside">
+                                <div class="card"
+                                    style="background: linear-gradient( #3C486B, rgb(84, 165, 202));   color: #ffffff !important; border-radius: 25px; box-shadow: 5px 10px #c0c2c4;">
+                                    <div class="card-body text-center">
+                                        <p><img class=" img-fluid" src="webimg/l.png" alt="card image" style="height:170px; width: 170px;"></p>
+                                        <h4 style="font-weight: bolder;">OTHER DESIGNING</h4>
+                                        <p>Logo Designing <br> Animated Videos <br> Profile Pics <br>Banner/Poster
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backside">
+                                <div class="card" style="background: linear-gradient(#FED8A7 , rgb(226, 132, 56)); border-radius: 25px;  box-shadow: 5px 10px #c0c2c4; padding-top: 15%;">
+                                    <div class="card-body text-center mt-4">
+                                        
+                                        <p class="card-text">At Web Clash, we offer logo design, profile picture creation, and favicon design
+                                             services to help you create a complete online identity for your brand. Let us help you make a great
+                                              first impression and establish a consistent visual identity across your website. <br><br>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./Team member -->
+                <!-- Team member -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                        <div class="mainflip">
+                            <div class="frontside">
+                                <div class="card"
+                                    style="background: linear-gradient(#FED8A7 , rgb(226, 132, 56)); border-radius: 25px; box-shadow: 5px 10px #c0c2c4;">
+                                    <div class="card-body text-center">
+                                        <p><img class=" img-fluid" src="webimg/photo_2023-05-06_17-33-06-removebg-preview.png" alt="card image" style="height:180px; width: 180px;"></p>
+                                        <h4 style="font-weight: bolder;">UPGRADING WEBSITE</h4>
+                                        <p class="card-text" >Re-designing <br>Domain <br> Hosting <br> Social Media</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backside">
+                                <div class="card"
+                                    style=" background: linear-gradient( #3C486B, rgb(84, 165, 202));   color: #ffffff !important; border-radius: 25px;  box-shadow: 5px 10px #c0c2c4; padding-top: 15%; ">
+                                    <div class="card-body text-center mt-4">
+                                        
+                                        <p class="card-text">At Web Clash, we can upgrade your existing website and help you create a
+                                             strong online presence for your brand. We offer website redesign services, new logo creation,
+                                              marketing tips, and domain and hosting solutions. Contact us today to learn more! <br><br>
+                                        </p>
+ 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./Team member -->
+
+
             </div>
-            <div class="col-sm-3" style="background-color:lavenderblush;">.col-sm-4</div>
-            <div class="col-sm-3" style="background-color:lavender;">.col-sm-4</div>
-                <div class="col-sm-3" style="background-color:lavenderblush;">.col-sm-4</div>
-          </div>
-    </div>
+        </div>
+    </section>
 </body>
 </html>
